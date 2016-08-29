@@ -14,7 +14,7 @@ echo .
 echo .
 echo .
 echo 1/7 Updating \(could take 30 minutes\)...
-sudo apt-get update && sudo apt-get dist-upgrade
+sudo apt-get update && sudo apt-get -y dist-upgrade
 
 echo .
 echo .
@@ -22,7 +22,7 @@ echo .
 echo .
 echo .
 echo 2/7 Installing xmlstarlet numlockx synaptic gparted gdebi cheese vlc xubuntu-restricted-extras \(non free codecs and other stuff\)...
-sudo apt-get install xmlstarlet numlockx synaptic gparted gdebi cheese vlc xubuntu-restricted-extras
+sudo apt-get -y install xmlstarlet numlockx synaptic gparted gdebi cheese vlc xubuntu-restricted-extras
 
 echo .
 echo .
@@ -30,7 +30,7 @@ echo .
 echo .
 echo .
 echo 3/7 Will not install Chromium \(Google Chrome\) and Flash
-# sudo apt-get install chromium-browser pepperflashplugin-nonfree
+# sudo apt-get -y install chromium-browser pepperflashplugin-nonfree
 
 echo .
 echo .
@@ -38,7 +38,7 @@ echo .
 echo .
 echo .
 echo 4/7 Allowing DVD DRM...
-sudo apt-get install libdvd-pkg
+sudo apt-get -y install libdvd-pkg
 sudo dpkg-reconfigure libdvd-pkg
 
 echo .
