@@ -21,8 +21,8 @@ echo .
 echo .
 echo .
 echo .
-echo 2/7 Installing xmlstarlet numlockx synaptic gparted gdebi vlc xubuntu-restricted-extras \(non free codecs and other stuff\)...
-sudo apt-get install xmlstarlet numlockx synaptic gparted gdebi vlc xubuntu-restricted-extras
+echo 2/7 Installing xmlstarlet numlockx synaptic gparted gdebi cheese vlc xubuntu-restricted-extras \(non free codecs and other stuff\)...
+sudo apt-get install xmlstarlet numlockx synaptic gparted gdebi cheese vlc xubuntu-restricted-extras
 
 echo .
 echo .
