@@ -1,0 +1,29 @@
+#!/bin/bash
+
+echo .
+echo Please check your Internet connection before starting...
+read -s -n1 -p "Press any key to continue."; echo
+
+echo .
+echo Updating...
+sudo apt-get -y update && sudo apt-get -y dist-upgrade
+
+echo .
+echo Installing         openssh-server synaptic gparted gdebi vlc ubuntu-restricted-extras chromium-browser pepperflashplugin-nonfree
+sudo apt-get -y install openssh-server synaptic gparted gdebi vlc ubuntu-restricted-extras chromium-browser pepperflashplugin-nonfree
+
+echo .
+echo Removing flashplugin-installer from Firefox
+sudo apt-get -y purge flashplugin-installer
+
+# echo .
+# Already done in case of System installation on root directory and without formatting home directory
+# echo Opening Firefox for the first time...
+# echo ... \>\>\> You will be able to install uBlock Origin
+# echo ... \>\>\> Do not forget to close Firefox to continue this script.
+# firefox https://addons.mozilla.org/en-US/firefox/addon/ublock-origin/
+
+echo .
+echo Rebooting...
+read -s -n1 -p "Press any key to continue."; echo
+systemctl reboot
