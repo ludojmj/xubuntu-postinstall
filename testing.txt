@@ -16,6 +16,11 @@ echo .
 echo Removing flashplugin-installer from Firefox
 sudo apt-get -y purge flashplugin-installer
 
+echo .
+echo Allowing DVD DRM...
+sudo apt-get -y install libdvd-pkg
+sudo dpkg-reconfigure libdvd-pkg
+
 # echo .
 # Already done in case of System installation on root directory and without formatting home directory
 # echo Opening Firefox for the first time...
