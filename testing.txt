@@ -9,8 +9,8 @@ echo Updating...
 sudo apt-get -y update && sudo apt-get -y dist-upgrade
 
 echo .
-echo Installing         openssh-server synaptic gparted gdebi vlc ubuntu-restricted-extras chromium-browser pepperflashplugin-nonfree
-sudo apt-get -y install openssh-server synaptic gparted gdebi vlc ubuntu-restricted-extras chromium-browser pepperflashplugin-nonfree
+echo Installing         numlockx gitso synaptic gparted gdebi vlc ubuntu-restricted-extras chromium-browser pepperflashplugin-nonfree
+sudo apt-get -y install numlockx gitso synaptic gparted gdebi vlc ubuntu-restricted-extras chromium-browser pepperflashplugin-nonfree
 
 echo .
 echo Removing flashplugin-installer from Firefox
