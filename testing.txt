@@ -9,24 +9,11 @@ echo Updating...
 sudo apt-get -y update && sudo apt-get -y dist-upgrade
 
 echo .
-echo Installing         numlockx gitso synaptic gparted gdebi vlc ubuntu-restricted-extras chromium-browser pepperflashplugin-nonfree
-sudo apt-get -y install numlockx gitso synaptic gparted gdebi vlc ubuntu-restricted-extras chromium-browser pepperflashplugin-nonfree
+echo Installing 1/2...
+sudo apt -y install numlockx gitso synaptic gparted gdebi vlc ubuntu-restricted-extras && sudo apt -y purge flashplugin-installer
 
-echo .
-echo Removing flashplugin-installer from Firefox
-sudo apt-get -y purge flashplugin-installer
-
-echo .
-echo Allowing DVD DRM...
-sudo apt-get -y install libdvd-pkg
-sudo dpkg-reconfigure libdvd-pkg
-
-# echo .
-# Already done in case of System installation on root directory and without formatting home directory
-# echo Opening Firefox for the first time...
-# echo ... \>\>\> You will be able to install uBlock Origin
-# echo ... \>\>\> Do not forget to close Firefox to continue this script.
-# firefox https://addons.mozilla.org/en-US/firefox/addon/ublock-origin/
+echo Installing 2/2...
+sudo apt -y install libdvd-pkg && sudo dpkg-reconfigure libdvd-pkg
 
 echo .
 echo Rebooting...
