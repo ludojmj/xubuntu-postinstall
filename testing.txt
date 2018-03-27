@@ -6,7 +6,7 @@ read -s -n1 -p "Press any key to continue."; echo
 
 echo .
 echo Updating...
-sudo apt-get -y update && sudo apt-get -y dist-upgrade
+sudo apt -y update && sudo apt -y dist-upgrade
 
 echo .
 echo Installing 1/2...
